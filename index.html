@@ -1,24 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Anish's Home Page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-  <script src="dist/js/jquery.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
-</head>
-<body>
+---
+layout: default
+---
 
- <ul class="breadcrumb text-center">
-  <li class="active"><a href="http://aanishn.github.io/">Home</a></li>
-<li><a href="#">About Me</a></li>  
-</ul>  
+<section>
+  <div class="jumbotron">
+    <div class="container">
+      {{site.description}}
 
-  <div class="jumbotron text-center">
-    <h1>Anish's Home Page</h1>
-    <p>Yay Welcome!</p> 
+    </div>
+
+</div>
+</section>
+
+<section id="page-content">
+  <div class="container">
+    <div class="post-list">
+  {%  for post in site.posts %}
+  <div class="post-box">
+    <div class="post-title">
+    <a class="post-title" href="{{post.url | prepend:site.baseurl }}" > {{ post.title }}</a>
+    </div>
+    <div class="post-excerpt">
+      {{ post.content | strip_html | truncatewords:20}}
+    </div>
+    <div class="posted">
+      posted on
+      <span class="posted-on">
+
+        {{ post.date | date: "%A, %B %-d, %Y" }}
+      </span>
+      <!-- <span class="in">
+        in
+      </span>
+      <span class="categories-on">
+        {% for category in post.categories%}
+        {{category}} &nbsp;{% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+      </span> -->
+    </div>
   </div>
-
-</body>
-</html>
+  {% endfor %}
+  </div>
+</section>

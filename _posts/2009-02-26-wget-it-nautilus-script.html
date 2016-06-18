@@ -1,0 +1,13 @@
+---
+layout: post
+title: wget-it, nautilus script
+date: '2009-02-26T22:05:00.000-08:00'
+author: "aanishn"
+tags:
+- gnome
+modified_time: '2009-02-28T03:41:39.541-08:00'
+blogger_id: tag:blogger.com,1999:blog-6841995940093616127.post-6098834969898293223
+blogger_orig_url: http://aanishnn.blogspot.com/2009/02/wget-it-nautilus-script.html
+---
+
+Nautilus scripts is a pretty awesome feature.<br /><br />Below is a 5min nautilus script which I wrote to get a feeling of the feature. It wgets a URI into the destination of your choice. Keep the script in ~/.gnome2/nautilus-scripts/wget-it. In nautilus navigate to the destination, right click->scipts->wget-it; paste the URI. done !!<br /><br />---<br /><pre>#/bin/sh<br /><br />URI=`zenity --entry --text="Enter the uri" --entry-text=http://`<br />filename=`basename $URI`<br />destdirname="${NAUTILUS_SCRIPT_CURRENT_URI##file://}"<br /><br />wget "$URI"<br />mv "$filename" "$destdirname"<br /><br />notify-send "$filename downloaded to $destdirname"<br /><br />exit 0<br /></pre>

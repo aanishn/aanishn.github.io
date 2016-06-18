@@ -1,0 +1,14 @@
+---
+layout: post
+title: Hello World again
+date: '2008-08-09T10:15:00.000-07:00'
+author: "aanishn"
+tags:
+- PyKDE4
+- KDE4
+modified_time: '2008-08-09T10:25:03.251-07:00'
+blogger_id: tag:blogger.com,1999:blog-6841995940093616127.post-6633232755127554498
+blogger_orig_url: http://aanishnn.blogspot.com/2008/08/hello-world-again.html
+---
+
+Time to say hello again, this time the PyKDE4 way <br /><br /><hr/> <i><br /><pre><br />#!/usr/bin/python<br />import sys<br />from PyKDE4.kdecore import *<br />from PyKDE4.kdeui import *<br />about = KAboutData(     "hellokde",<br />                        "",<br />                        ki18n("Say hello, world the KDE4 way..."),<br />                        "0.1")<br />KCmdLineArgs.init( sys.argv, about )<br />hello = KApplication()<br />KMessageBox.messageBox( None,<br />                        KMessageBox.Information,<br />                        "hello, world !!",<br />                        "Hello World Application" )<br /></pre><br /></i><br /><hr/>

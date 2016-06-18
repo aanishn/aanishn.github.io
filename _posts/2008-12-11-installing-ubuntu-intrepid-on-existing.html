@@ -1,0 +1,13 @@
+---
+layout: post
+title: Installing ubuntu intrepid on an existing lvm root partition
+date: '2008-12-11T03:16:00.000-08:00'
+author: "aanishn"
+tags:
+- Ubuntu
+modified_time: '2008-12-11T03:20:05.440-08:00'
+blogger_id: tag:blogger.com,1999:blog-6841995940093616127.post-8869651200727084488
+blogger_orig_url: http://aanishnn.blogspot.com/2008/12/installing-ubuntu-intrepid-on-existing.html
+---
+
+<p>Boot into the live image. Before starting the installation lvm<br />support has to be added, so that your existing lvm partition can be<br />activated and used in the process.<br /></p>Install lvm2, load dm-mod module into kernel,<br /><i># apt-get update<br /></i><i># apt-get install lvm2<br /></i><i># modprobe dm-mod<br /><br /></i>Now to activate the VolumeGroup you need to know its name, lvs can be used for this<br /><i># lvs<br /></i>LV        VG         Attr   LSize  Origin Snap%  Move Log<i> Copy%  Convert<br /></i>lv_backup VolGroup00 -wi-ao 40.00G                         <br />lv_home   VolGroup00 -wi-ao 66.91G                         <br />lv_root   VolGroup00 -wi-ao 40.00G                         <br /><i>lv_swap   VolGroup00 -wi-ao  2.00G  <br /></i><i># lv-change -ay VolGroup00<br /><br /></i>Now mount the root lvm partition some where say /mnt, chroot there.<i><br /># mount /dev/VolGroup00/lv_root /mnt<br /></i><i># chroot /mnt<br /><br /></i>We need to install the same support into the installed OS, regenerate the initrd image.In case you have boot on a different partition please mount it on <i>/boot</i> before this step is done.<br /><i># apt-get update<br /></i><i># apt-get install lvm2<br /></i><br />This step should regenerate the initrd-image.
