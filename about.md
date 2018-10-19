@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-I am a Linux kernel/bsp engineer at my day job & a CS masters student.
+An NLP engineer and technology enthusiast with CS masters focused on ML. Long term exposure to Linux kernel/device driver.
