@@ -13,14 +13,14 @@ tags:
 
 1. Update api_token with kaggle api key for downloading dataset
 
-          - Login to kaggle
-          - My Profile > Edit Profile > Createt new API Token
-          - Update **api_token** dict below with the values
+    - Login to kaggle
+    - My Profile > Edit Profile > Createt new API Token
+    - Update **api_token** dict below with the values
 
 2. Change Notebook runtime to TPU
 
-          - In colab notebook menu, Runtime > Change runtime type
-          - Select TPU in the list
+    - In colab notebook menu, Runtime > Change runtime type
+    - Select TPU in the list
 
 Install kaggle package, download and extract zip file
 
