@@ -1,6 +1,13 @@
+---
+layout: post
+title: Kaggle Dogs Vs Cats Using Lenet On Google Colab TPU
+date: '2018-10-19'
+author: "aanishn"
+tags:
+- Google colab, TPU, Tensorflow, Keras
+---
 
-Kaggle Dogs Vs. Cats Using LeNet  on Google Colab TPU
-==================================================
+[Download Notebook](/artifacts/Kaggle_Dogs_Vs_Cats_Using_LeNet_on_Google_Colab_TPU.ipynb)
 
 ### Required setup
 
@@ -9,9 +16,9 @@ Kaggle Dogs Vs. Cats Using LeNet  on Google Colab TPU
           - Login to kaggle
           - My Profile > Edit Profile > Createt new API Token
           - Update **api_token** dict below with the values
-          
+
 2. Change Notebook runtime to TPU
-          
+
           - In colab notebook menu, Runtime > Change runtime type
           - Select TPU in the list
 
@@ -21,7 +28,7 @@ Install kaggle package, download and extract zip file
 ```
 !pip install kaggle
 
-api_token = {"username":"xxxxx","key":"xxxxxxxxxxxxxxxxxxxxxxxx"}
+api_token = {"username":"XXXXX","key":"XXXXXXXXXXXXX"}
 
 import json
 import zipfile
@@ -38,7 +45,7 @@ with open('/root/.kaggle/kaggle.json', 'w') as file:
 
     Collecting keras
     [?25l  Downloading https://files.pythonhosted.org/packages/5e/10/aa32dad071ce52b5502266b5c659451cfd6ffcbf14e6c8c4f16c0ff5aaab/Keras-2.2.4-py2.py3-none-any.whl (312kB)
-    [K    100% |████████████████████████████████| 317kB 9.7MB/s 
+    [K    100% |████████████████████████████████| 317kB 9.7MB/s
     [?25hRequirement already satisfied, skipping upgrade: keras-preprocessing>=1.0.5 in /usr/local/lib/python3.6/dist-packages (from keras) (1.0.5)
     Requirement already satisfied, skipping upgrade: six>=1.9.0 in /usr/local/lib/python3.6/dist-packages (from keras) (1.11.0)
     Requirement already satisfied, skipping upgrade: h5py in /usr/local/lib/python3.6/dist-packages (from keras) (2.8.0)
@@ -53,7 +60,7 @@ with open('/root/.kaggle/kaggle.json', 'w') as file:
     Successfully installed keras-2.2.4
     Collecting kaggle
     [?25l  Downloading https://files.pythonhosted.org/packages/c6/78/832b9a9ec6b3baf8ec566e1f0a695f2fd08d2c94a6797257a106304bfc3c/kaggle-1.4.7.1.tar.gz (52kB)
-    [K    100% |████████████████████████████████| 61kB 6.5MB/s 
+    [K    100% |████████████████████████████████| 61kB 6.5MB/s
     [?25hRequirement already satisfied: urllib3<1.23.0,>=1.15 in /usr/local/lib/python3.6/dist-packages (from kaggle) (1.22)
     Requirement already satisfied: six>=1.10 in /usr/local/lib/python3.6/dist-packages (from kaggle) (1.11.0)
     Requirement already satisfied: certifi in /usr/local/lib/python3.6/dist-packages (from kaggle) (2018.10.15)
@@ -66,7 +73,7 @@ with open('/root/.kaggle/kaggle.json', 'w') as file:
     Requirement already satisfied: idna<2.7,>=2.5 in /usr/local/lib/python3.6/dist-packages (from requests->kaggle) (2.6)
     Collecting Unidecode>=0.04.16 (from python-slugify->kaggle)
     [?25l  Downloading https://files.pythonhosted.org/packages/59/ef/67085e30e8bbcdd76e2f0a4ad8151c13a2c5bce77c85f8cad6e1f16fb141/Unidecode-1.0.22-py2.py3-none-any.whl (235kB)
-    [K    100% |████████████████████████████████| 235kB 11.3MB/s 
+    [K    100% |████████████████████████████████| 235kB 11.3MB/s
     [?25hBuilding wheels for collected packages: kaggle, python-slugify
       Running setup.py bdist_wheel for kaggle ... [?25l- \ done
     [?25h  Stored in directory: /root/.cache/pip/wheels/44/2c/df/22a6eeb780c36c28190faef6252b739fdc47145fd87a6642d4
@@ -179,7 +186,7 @@ print(model.summary())
     _________________________________________________________________
     flatten (Flatten)            (None, 327680)            0         
     _________________________________________________________________
-    dense (Dense)                (None, 500)               163840500 
+    dense (Dense)                (None, 500)               163840500
     _________________________________________________________________
     dense_1 (Dense)              (None, 2)                 1002      
     =================================================================
