@@ -9,7 +9,7 @@ tags:
 
 [Download Notebook](/artifacts/Kaggle_Dogs_Vs_Cats_Using_LeNet_on_Google_Colab_TPU.ipynb)
 
-### Required setup
+#### Required setup
 
 1. Update api_token with kaggle api key for downloading dataset
 

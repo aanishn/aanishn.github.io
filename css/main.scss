@@ -54,6 +54,9 @@ body{
 .jumbotron {
   background: #093750 !important;
 }
+.jumbotron h1 {
+  font-size: 30px !important;
+}
 a {
     color: #03a4fb;
     text-decoration: none;
@@ -90,7 +93,7 @@ padding-bottom: 0.3em;
   color: #abc0ca !important;
 }
 .post-content{
-  font-size: 19px;
+  font-size: 15px;
   text-align: justify;
   padding-bottom: 5em;
 }
@@ -98,7 +101,7 @@ pre{
 background-color: black !important;
 border:none !important;
 border-radius: 0px !important;
-font-size: 20px !important;
+font-size: 12px !important;
 padding: 1.5em !important;
 color:white !important;
 }
