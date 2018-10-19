@@ -19,3 +19,7 @@ url: "http://aanishn.github.io/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+plugins:
+ - jekyll-sitemap
+ - jekyll-seo-tag
