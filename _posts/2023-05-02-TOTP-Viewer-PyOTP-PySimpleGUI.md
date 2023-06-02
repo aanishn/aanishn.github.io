@@ -19,9 +19,9 @@ import pyotp
 import PySimpleGUI as sg
 
 totp_list = {
-    "Sample 1": "4XVEKNAPFBIGNCX5NGA2DE3GTAM3UPKV",
-    "Sample 2": "DWX74LBWAAPIJXHCZQFATLWLIYUUBCXQ",
-    "Sample 3": "45F7FUDKSH6WT4FZBC26HLXE6MJLLI5E",
+    "Sample 1": "JBSWY3DPEHPK3PXP",
+    "Sample 2": "JBSWY3DPEHPK3PXP",
+    "Sample 3": "JBSWY3DPEHPK3PXP",
 }
 
 totp_objs = { k:(pyotp.TOTP(v), sg.Text(key=k)) for k, v in totp_list.items() }
